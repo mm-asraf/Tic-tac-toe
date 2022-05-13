@@ -38,20 +38,63 @@
       font-size: 60px;
       text-align: center;
       background-color: red;
+      cursor: pointer;
     }
   </style>
   <body>
     <h2>Tic-Tac-Toe</h2>
     <div class="container">
-      <div class="one">1</div>
-      <div class="two">2</div>
-      <div class="three">3</div>
-      <div class="four">4</div>
-      <div class="five">5</div>
-      <div class="six">6</div>
-      <div class="seven">7</div>
-      <div class="eight">8</div>
-      <div class="nine">9</div>
+      <div id="a1" class="one">-</div>
+      <div id="a2" class="two">-</div>
+      <div id="a3" class="three">-</div>
+      <div id="a4" class="four">-</div>
+      <div id="a5" class="five">-</div>
+      <div id="a6" class="six">-</div>
+      <div id="a7" class="seven">-</div>
+      <div id="a8" class="eight">-</div>
+      <div id="a9" class="nine">-</div>
     </div>
   </body>
 </html>
+
+<script>
+  let a1 = document.getElementById("a1");
+  let a2 = document.getElementById("a2");
+  let a3 = document.getElementById("a3");
+  let a4 = document.getElementById("a4");
+  let a5 = document.getElementById("a5");
+  let a6 = document.getElementById("a6");
+  let a7 = document.getElementById("a7");
+  let a8 = document.getElementById("a8");
+  let a9 = document.getElementById("a9");
+
+  a1.addEventListener("click", function () {
+    a1.innerText = "x";
+  });
+  a2.addEventListener("click", function () {
+    a2.innerText = "x";
+  });
+  a3.addEventListener("click", function () {
+    a3.innerText = "x";
+  });
+  a4.addEventListener("click", function () {
+    a4.innerText = "x";
+  });
+  a5.addEventListener("click", function () {
+    a5.innerText = "x";
+  });
+  a6.addEventListener("click", function () {
+    a6.innerText = "x";
+  });
+  a7.addEventListener("click", function () {
+    a7.innerText = "x";
+  });
+  a8.addEventListener("click", function () {
+    a8.innerText = "x";
+  });
+  a9.addEventListener("click", function () {
+    a9.innerText = "x";
+  });
+
+  //   in progress
+</script>

@@ -15,7 +15,7 @@
       width: 420px;
       margin-top: 20px;
       aspect-ratio: 1/1;
-      background-color: aqua;
+      box-shadow: 0 0 28px 4px rgba(0, 0, 0, 0.1);
       margin: 0 auto;
       align-items: center;
       display: grid;
@@ -39,6 +39,20 @@
       text-align: center;
       background-color: rgb(218, 204, 204);
       cursor: pointer;
+    }
+
+    #show {
+      width: 200px;
+      text-align: center;
+      margin: 20px auto;
+      font-size: 35px;
+      box-shadow: 0 0 28px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    #btn {
+      width: 100px;
+      height: 40px;
+      margin-left: 47%;
     }
   </style>
   <body>
@@ -109,6 +123,7 @@
       />
     </div>
     <div id="show"></div>
+    <button id="btn" onclick="reset()">RESET</button>
   </body>
 </html>
 
@@ -129,13 +144,14 @@
       (a2 == "x" || a2 == "X") &&
       (a3 == "x" || a3 == "X")
     ) {
-      show.innerHTML == "X win";
+      show.innerHTML = "X win";
       a4.disabled = true;
       a5.disabled = true;
       a6.disabled = true;
       a7.disabled = true;
       a8.disabled = true;
       a9.disabled = true;
+      window.alert("x win");
     } else if (
       (a1 == "x" || a1 == "X") &&
       (a4 == "x" || a4 == "X") &&
@@ -149,6 +165,7 @@
       a6.disabled = true;
       a8.disabled = true;
       a9.disabled = true;
+      window.alert("x win");
     } else if (
       (a3 == "x" || a3 == "X") &&
       (a6 == "x" || a6 == "X") &&
@@ -162,6 +179,7 @@
       a5.disabled = true;
       a7.disabled = true;
       a8.disabled = true;
+      window.alert("x win");
     } else if (
       (a7 == "x" || a7 == "X") &&
       (a8 == "x" || a8 == "X") &&
@@ -175,6 +193,7 @@
       a4.disabled = true;
       a5.disabled = true;
       a6.disabled = true;
+      window.alert("x win");
     } else if (
       (a2 == "x" || a2 == "X") &&
       (a5 == "x" || a5 == "X") &&
@@ -188,6 +207,21 @@
       a6.disabled = true;
       a7.disabled = true;
       a9.disabled = true;
+      window.alert("x win");
+    } else if (
+      (a4 == "x" || a4 == "X") &&
+      (a5 == "x" || a5 == "X") &&
+      (a6 == "x" || a6 == "X")
+    ) {
+      show.innerHTML = "X win";
+
+      a1.disabled = true;
+      a2.disabled = true;
+      a3.disabled = true;
+      a7.disabled = true;
+      a8.disabled = true;
+      a9.disabled = true;
+      window.alert("x win");
     } else if (
       (a1 == "x" || a1 == "X") &&
       (a5 == "x" || a5 == "X") &&
@@ -201,6 +235,7 @@
       a6.disabled = true;
       a7.disabled = true;
       a8.disabled = true;
+      window.alert("x win");
     } else if (
       (a3 == "x" || a3 == "X") &&
       (a5 == "x" || a5 == "X") &&
@@ -215,25 +250,25 @@
       a8.disabled = true;
       a9.disabled = true;
       // -------------------------
-    }
-    if (
+    } else if (
       (a1 == "o" || a1 == "O") &&
       (a2 == "o" || a2 == "O") &&
       (a3 == "o" || a3 == "O")
     ) {
-      show.innerHTML == "X win";
+      show.innerHTML == "O win";
       a4.disabled = true;
       a5.disabled = true;
       a6.disabled = true;
       a7.disabled = true;
       a8.disabled = true;
       a9.disabled = true;
+      window.alert("O win");
     } else if (
       (a1 == "o" || a1 == "O") &&
       (a4 == "o" || a4 == "O") &&
       (a7 == "o" || a7 == "O")
     ) {
-      show.innerHTML = "X win";
+      show.innerHTML = "O win";
 
       a2.disabled = true;
       a3.disabled = true;
@@ -241,12 +276,13 @@
       a6.disabled = true;
       a8.disabled = true;
       a9.disabled = true;
+      window.alert("O win");
     } else if (
       (a3 == "o" || a3 == "O") &&
       (a6 == "o" || a6 == "O") &&
       (a9 == "o" || a9 == "O")
     ) {
-      show.innerHTML = "X win";
+      show.innerHTML = "O win";
 
       a1.disabled = true;
       a2.disabled = true;
@@ -254,12 +290,13 @@
       a5.disabled = true;
       a7.disabled = true;
       a8.disabled = true;
+      window.alert("O win");
     } else if (
       (a7 == "o" || a7 == "O") &&
       (a8 == "o" || a8 == "O") &&
       (a9 == "o" || a9 == "O")
     ) {
-      show.innerHTML = "X win";
+      show.innerHTML = "O win";
 
       a1.disabled = true;
       a2.disabled = true;
@@ -267,12 +304,13 @@
       a4.disabled = true;
       a5.disabled = true;
       a6.disabled = true;
+      window.alert("O win");
     } else if (
       (a2 == "o" || a2 == "O") &&
       (a5 == "o" || a5 == "O") &&
       (a8 == "o" || a8 == "O")
     ) {
-      show.innerHTML = "X win";
+      show.innerHTML = "O win";
 
       a1.disabled = true;
       a3.disabled = true;
@@ -280,12 +318,27 @@
       a6.disabled = true;
       a7.disabled = true;
       a9.disabled = true;
+      window.alert("O win");
+    } else if (
+      (a4 == "o" || a4 == "O") &&
+      (a5 == "o" || a5 == "O") &&
+      (a6 == "o" || a6 == "O")
+    ) {
+      show.innerHTML = "O win";
+
+      a1.disabled = true;
+      a2.disabled = true;
+      a3.disabled = true;
+      a7.disabled = true;
+      a8.disabled = true;
+      a9.disabled = true;
+      window.alert("O win");
     } else if (
       (a1 == "o" || a1 == "O") &&
       (a5 == "o" || a5 == "O") &&
       (a9 == "o" || a9 == "O")
     ) {
-      show.innerHTML = "X win";
+      show.innerHTML = "O win";
 
       a2.disabled = true;
       a3.disabled = true;
@@ -293,12 +346,13 @@
       a6.disabled = true;
       a7.disabled = true;
       a8.disabled = true;
+      window.alert("O win");
     } else if (
       (a3 == "o" || a3 == "O") &&
       (a5 == "o" || a5 == "O") &&
       (a7 == "o" || a7 == "O")
     ) {
-      show.innerHTML = "X win";
+      show.innerHTML = "O win";
 
       a1.disabled = true;
       a2.disabled = true;
@@ -306,11 +360,25 @@
       a6.disabled = true;
       a8.disabled = true;
       a9.disabled = true;
+      window.alert("O win");
+    } else if (
+      (a1 == "x" || a1 == "o") &&
+      (a2 == "x" || a2 == "o") &&
+      (a3 == "x" || a3 == "o") &&
+      (a4 == "x" || a4 == "o") &&
+      (a5 == "x" || a5 == "o") &&
+      (a6 == "x" || a6 == "o") &&
+      (a7 == "x" || a7 == "o") &&
+      (a8 == "x" || a8 == "o") &&
+      (a9 == "x" || a9 == "o")
+    ) {
+      show.innerHTML = "Game Tie";
+      window.alert("Game Tie");
     } else {
       if (flag == 1) {
-        show.innerHTML = "x turn";
-      } else {
         show.innerHTML = "o turn";
+      } else {
+        show.innerHTML = "x turn";
       }
     }
   }
@@ -399,7 +467,7 @@
       flag = 1;
     }
   }
-  function eigth() {
+  function eighth() {
     if (flag == 1) {
       a8.value = "x";
       a8.disabled = true;
@@ -422,5 +490,20 @@
       flag = 1;
     }
   }
+
+  function reset() {
+    location.reload();
+    a1.value = "";
+    a2.value = "";
+    a3.value = "";
+    a4.value = "";
+    a5.value = "";
+    a6.value = "";
+    a7.value = "";
+    a8.value = "";
+    a9.value = "";
+    a10.value = "";
+  }
+
   //   in progress
 </script>
